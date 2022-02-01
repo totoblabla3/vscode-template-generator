@@ -1,0 +1,64 @@
+{
+  "name": "vscode-template-generator",
+  "displayName": "vscode-template-generator",
+  "description": "Files/Folders template generator for vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "keywords": [
+    "Template",
+    "File",
+    "Folder",
+    "Mustache"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.GenerateTemplate"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.GenerateTemplate",
+        "title": "Generate from Template"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.GenerateTemplate",
+          "when": "explorerResourceIsFolder",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "rm -rf ./out && tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.0.0",
+    "@types/mustache": "^4.1.2",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.63.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "@vscode/test-electron": "^2.0.3",
+    "eslint": "^8.6.0",
+    "glob": "^7.2.0",
+    "mocha": "^9.1.3",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "mustache": "^4.2.0",
+    "vscode-test": "^1.6.1"
+  }
+}
