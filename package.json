@@ -3,8 +3,10 @@
   "displayName": "vscode-template-generator",
   "description": "Files/Folders template generator for vscode",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.63.0"
+  "publisher": "totoblabla",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/totoblabla3/vscode-template-generator"
   },
   "keywords": [
     "Template",
@@ -15,6 +17,9 @@
   "categories": [
     "Other"
   ],
+  "engines": {
+    "vscode": "^1.63.0"
+  },
   "activationEvents": [
     "onCommand:extension.GenerateTemplate"
   ],
