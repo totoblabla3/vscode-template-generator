@@ -69,7 +69,7 @@ export function getLineNoFromString(
 }
 
 export const invalidFileNames =
-    /^(\d|\-)|[\\\s+={}\(\)\[\]"`/;,:.*?'<>|#$%^@!~&]|\-$/
+    /^(\d|\-)|[\\\s+={}\(\)\[\]"`/;,:*?'<>|#$%^@!~&]|\-$/
 
 export function removeSpecialChar(str: string) {
     const specialCharIndex = str.indexOf('-')
