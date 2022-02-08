@@ -2,7 +2,7 @@
   "name": "vscode-template-generator",
   "displayName": "Template generator",
   "description": "Files/Folders template generator for vscode",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "totoblabla",
   "repository": {
     "type": "git",
@@ -44,6 +44,8 @@
     }
   },
   "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish",
     "vscode:prepublish": "npm run compile",
     "compile": "rm -rf ./out && tsc -p ./",
     "watch": "tsc -watch -p ./"
