@@ -13,9 +13,7 @@ Right click on any folder/file in your current project. You can find command tha
 
 ### Templates path
 
-* Windows : %HOMEPATH%/.vscode/templates
-* Linux : ~/.vscode/templates
-* Mac : ~/.vscode/templates
+* workspace/.vscode/templates
 
 ### Custom fields
 

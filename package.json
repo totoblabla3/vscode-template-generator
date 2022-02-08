@@ -1,8 +1,8 @@
 {
   "name": "vscode-template-generator",
   "displayName": "Template generator",
-  "description": "Files/Folders template generator for vscode",
-  "version": "0.0.3",
+  "description": "Files/Folders mustache template generator for vscode",
+  "version": "0.0.4",
   "publisher": "totoblabla",
   "repository": {
     "type": "git",
