@@ -50,3 +50,5 @@ import { {{ Name }}Service } from './{{ inputName }}.service'
 })
 export class {{ Name }}Module {}
 ```
+
+* [Example code](.vscode/templates/example/{{inputName}})
