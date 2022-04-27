@@ -1,12 +1,5 @@
 import path = require('path')
-import {
-    commands,
-    ExtensionContext,
-    Uri,
-    window,
-    workspace,
-    WorkspaceFolder,
-} from 'vscode'
+import { commands, ExtensionContext, Uri, window, workspace } from 'vscode'
 import { createFile } from './file-helper'
 import {
     getFirstDirLayer,
@@ -31,23 +24,7 @@ export function activate(context: ExtensionContext) {
                 )
             }
 
-            // const wf = workspace.workspaceFolders[0].uri.path
-            let wf: string
-            if (!workspace.workspaceFolders) {
-                wf = workspace.workspaceFolders
-            } else {
-                let root: WorkspaceFolder
-                if (workspace.workspaceFolders.length === 1) {
-                    root = workspace.workspaceFolders[0]
-                } else {
-                    root = workspace.getWorkspaceFolder(
-                        resource
-                    ) as WorkspaceFolder
-                }
-
-                wf = root.uri.fsPath
-            }
-
+            const wf = workspace.workspaceFolders[0].uri.fsPath
             const templatesFolder = path.join(wf, '.vscode', 'templates')
             const templatesNames = getFirstDirLayer(templatesFolder)
             if (!templatesNames) {
