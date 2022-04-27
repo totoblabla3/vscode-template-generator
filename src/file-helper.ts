@@ -26,7 +26,7 @@ export async function createFile(file: ToGenerate) {
             )
         } else {
             file.uri = Uri.parse(
-                file.uri.path.replace(basename(file.uri.path), '')
+                file.uri.fsPath.replace(basename(file.uri.fsPath), '')
             )
             file.uri = Uri.joinPath(
                 file.uri,
@@ -37,7 +37,7 @@ export async function createFile(file: ToGenerate) {
 
         return getFileTemplate(file)
             .then((data) => {
-                ensureDirectoryExistence(file.uri.path)
+                ensureDirectoryExistence(file.uri.fsPath)
                 return workspace.fs.writeFile(
                     file.uri,
                     new TextEncoder().encode(data)
