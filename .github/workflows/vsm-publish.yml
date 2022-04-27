@@ -1,9 +1,9 @@
 name: Visual Studio Marketplace Publish
 
 on :
-   push :
-     tags : 
-      - " * "
+  push:
+    tags:
+      - "*"
       
 jobs:
   deploy:
