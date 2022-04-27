@@ -48,7 +48,8 @@
     "publish": "vsce publish",
     "vscode:prepublish": "npm run compile",
     "compile": "rm -rf ./out && tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "patch": "npm version patch"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
