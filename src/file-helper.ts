@@ -14,8 +14,6 @@ export async function createFile(file: ToGenerate) {
     ) {
         return window.showErrorMessage('A file already exists with given name')
     } else {
-        console.log(file)
-
         const stats = await workspace.fs.stat(file.uri)
 
         if (stats.type === FileType.Directory) {
