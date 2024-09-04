@@ -1,15 +1,17 @@
 # Mustache Template Generator
 
-This extension helps in creating files and folders easily from defined templates.
+✨ This extension helps in creating files and folders easily from defined templates.
 
 ## Features
 
 - File template support
 - Folder template support
 
-## Usages
+## Usage
 
-Right click on any folder/file in your current project. You can find command that has been added to the context menu: `Generate from Template`
+![Generate from Template](/assets/demo.gif)
+
+Right click on any folder/file in your current project. You can find command that has been added to the context menu: `Generate from Template`. Click on it, select a template and enter a word that will replace the fields in the template.
 
 ### Templates path
 
@@ -54,4 +56,4 @@ import { {{ Name }}Service } from './{{ inputName }}.service'
 export class {{ Name }}Module {}
 ```
 
-- [Example code](.vscode/templates/example/{{inputName}})
+[Example code](.vscode/templates/example/{{inputName}})
